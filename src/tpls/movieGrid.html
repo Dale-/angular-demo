@@ -1,0 +1,32 @@
+<div ng-controller="MovieListCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <a ui-sref="addMovie" class="btn btn-primary">Add Movie</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div ng-model="movies">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>movieId</th>
+                            <th>name</th>
+                            <th>pubTime</th>
+                            <th>director</th>
+                            <th>star</th>
+                        </tr>
+                        <tr ng-repeat="movie in movies">
+                            <td>{{movie.movieId}}</td>
+                            <td>{{movie.name}}</td>
+                            <td>{{movie.pubTime | pubDateTime}}</td>
+                            <td>{{movie.director}}</td>
+                            <td>{{movie.star}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
