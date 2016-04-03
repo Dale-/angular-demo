@@ -23,7 +23,35 @@
                             <td>{{movie.pubTime | pubDateTime}}</td>
                             <td>{{movie.director}}</td>
                             <td>{{movie.star}}</td>
-                            <td><button type="button" class="btn btn-danger btn-xs" ng-click="delete_movie(movie.movieId)">Delete</button></td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs"
+                                        data-toggle="modal" data-target="#myModal">Delete
+                                </button>
+                            </td>
+
+
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                Delete Movie
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Do you want to delete {{movie.name}} movie ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                    aria-label="Close" ng-click="delete_movie($index+1)">Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </tr>
                     </table>
                 </div>
@@ -31,4 +59,7 @@
         </div>
     </div>
 </div>
+
+
+
 

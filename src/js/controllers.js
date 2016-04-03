@@ -7,6 +7,7 @@ movieList.controller('MovieListCtrl', function ($scope, $http, $state, $statePar
     $scope.movies = $scope.movies ? $scope.movies : [];
     $scope.movieType = $stateParams.movieType;
     $scope.delete_movie = function (movie_id) {
+        console.log(movie_id);
         $scope.movies.splice(movie_id - 1, 1);
         localStorage.setItem('movies' + $scope.movieType, JSON.stringify($scope.movies));
     }
