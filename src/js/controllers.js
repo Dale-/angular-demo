@@ -11,6 +11,7 @@ movieList.controller('MovieListCtrl', function ($scope, $http, $state, $statePar
     //});
 
     $scope.movies = JSON.parse(localStorage.getItem('movies' + $stateParams.movieType));
+    $scope.movies = $scope.movies ? $scope.movies : [];
 
 });
 

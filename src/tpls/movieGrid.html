@@ -15,6 +15,7 @@
                             <th>pubTime</th>
                             <th>director</th>
                             <th>star</th>
+                            <th>Delete</th>
                         </tr>
                         <tr ng-repeat="movie in movies">
                             <td>{{movie.movieId}}</td>
@@ -22,6 +23,7 @@
                             <td>{{movie.pubTime | pubDateTime}}</td>
                             <td>{{movie.director}}</td>
                             <td>{{movie.star}}</td>
+                            <td><span class="label label-danger">Delete</span></td>
                         </tr>
                     </table>
                 </div>
