@@ -18,12 +18,12 @@
                             <th>Delete</th>
                         </tr>
                         <tr ng-repeat="movie in movies">
-                            <td>{{movie.movieId}}</td>
+                            <td>{{$index+1}}</td>
                             <td>{{movie.name}}</td>
                             <td>{{movie.pubTime | pubDateTime}}</td>
                             <td>{{movie.director}}</td>
                             <td>{{movie.star}}</td>
-                            <td><span class="label label-danger">Delete</span></td>
+                            <td><button type="button" class="btn btn-danger btn-xs" ng-click="delete_movie(movie.movieId)">Delete</button></td>
                         </tr>
                     </table>
                 </div>

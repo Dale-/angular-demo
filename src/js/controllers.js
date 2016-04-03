@@ -1,17 +1,15 @@
 var movieList = angular.module('MovieListModule', []);
-//var i = 0;
 
 movieList.controller('MovieListCtrl', function ($scope, $http, $state, $stateParams, SetItem) {
-    //i++;
-    //$.getJSON('../mock/movies' + $stateParams.movieType + '.json', function (json) {
-    //    if (i == 1) {
-    //        SetItem(json);
-    //    }
-    //    $scope.movies = JSON.parse(localStorage.getItem('movies'));
-    //});
 
+    console.log('movies' + $stateParams.movieType);
     $scope.movies = JSON.parse(localStorage.getItem('movies' + $stateParams.movieType));
     $scope.movies = $scope.movies ? $scope.movies : [];
+    $scope.movieType = $stateParams.movieType;
+    $scope.delete_movie = function (movie_id) {
+        $scope.movies.splice(movie_id - 1, 1);
+        localStorage.setItem('movies' + $scope.movieType, JSON.stringify($scope.movies));
+    }
 
 });
 
@@ -21,14 +19,12 @@ movieList.controller('AddMovieCtrl', function ($scope, $http, $state, $statePara
         var movie_type = $('#movie_type option:selected').val();
         var movies = JSON.parse(localStorage.getItem('movies' + movie_type));
         movies = movies ? movies : [];
-        var id = movies.length;
         $scope.movie = {
             name: $scope.name,
             pubTime: $scope.pubTime,
             director: $scope.director,
             star: $scope.star,
-            type: movie_type,
-            movieId: id + 1
+            type: movie_type
         };
 
         movies.push($scope.movie);

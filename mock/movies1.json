@@ -1,34 +1,30 @@
 [
   {
-    "movieId": "1",
-    "index": "1",
     "name": "Lost 迷失",
     "pubTime": "2004.8.6",
     "director": "J.J. Abrams",
-    "star": "Damon Lindelof / Bryan Burk / Carlton Cuse / Jack Bender"
+    "star": "Damon Lindelof / Bryan Burk / Carlton Cuse / Jack Bender",
+    "type": "1"
   },
   {
-    "movieId": "2",
-    "index": "2",
     "name": "Gossip Girl 绯闻女孩",
     "pubTime": "2007.1.2",
     "director": "Tony Wharmby / Patrick R. Norris",
-    "star": "Blake Lively / Leighton Meester / Penn Badgley / Chace Crawford"
+    "star": "Blake Lively / Leighton Meester / Penn Badgley / Chace Crawford",
+    "type": "1"
   },
   {
-    "movieId": "3",
-    "index": "3",
     "name": "The Vampire Diaries 吸血鬼日记",
     "pubTime": "2009.1.3",
     "director": "Kevin Williamson / Julie Plec ",
-    "star": "Nina Dobrev / Paul Wesley / Ian Somerhalder / Steven R. McQueen"
+    "star": "Nina Dobrev / Paul Wesley / Ian Somerhalder / Steven R. McQueen",
+    "type": "1"
   },
   {
-    "movieId": "4",
-    "index": "4",
     "name": "True Blood 真爱如血",
     "pubTime": "2008.4.3",
     "director": "Alan Ball",
-    "star": "Gregg Fienberg / Brian Buckner / Raelle Tucker / Alexander Woo"
+    "star": "Gregg Fienberg / Brian Buckner / Raelle Tucker / Alexander Woo",
+    "type": "1"
   }
 ]
