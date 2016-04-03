@@ -19,7 +19,7 @@
                             类型：
                         </label>
                         <div class="col-md-10">
-                            <select class="form-control" ng-model="type">
+                            <select class="form-control" ng-model="type" id="movie_type">
                                 <option value="1">美剧</option>
                                 <option value="2">英剧</option>
                                 <option value="3">韩剧</option>
@@ -53,8 +53,30 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <a class="btn btn-success" ng-click="saveMovie();" href="javascript:history.go(-1)">保存</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">保存</a>
                             <a ui-sref="movieList({movieType:1})" class="btn btn-primary">取消</a>
+
+
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                Add Movie
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Add Movie {{name}} Successful
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" ng-click="saveMovie()">Save changes</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </form>
@@ -62,6 +84,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 
