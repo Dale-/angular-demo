@@ -22,5 +22,5 @@ movie.config(function($stateProvider, $urlRouterProvider) {
        .state('addMovie', {
           url: '/addMovie',
            templateUrl: 'tpls/addMovie.html'
-       });
+       })
 });
