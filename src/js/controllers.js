@@ -9,22 +9,12 @@ movieList.controller('MovieListCtrl', function ($scope, $http, $state, $statePar
     }
 });
 
-movieList.controller('AddMovieCtrl', function ($scope, $http, $state, $stateParams) {
+movieList.controller('AddMovieCtrl', function ($scope, $http, $state, $stateParams, GetMoviesByType, AddMovieToMovies) {
 
     $scope.saveMovie = function () {
         var movie_type = $('#movie_type option:selected').val();
-        var movies = JSON.parse(localStorage.getItem('movies' + movie_type));
-        movies = movies ? movies : [];
-        $scope.movie = {
-            name: $scope.name,
-            pubTime: $scope.pubTime,
-            director: $scope.director,
-            star: $scope.star,
-            type: movie_type
-        };
-
-        movies.push($scope.movie);
-        localStorage.setItem('movies' + movie_type, JSON.stringify(movies));
+        var movies = GetMoviesByType(movie_type);
+        AddMovieToMovies($scope, movies, movie_type);
         document.form.reset();
     };
 });
