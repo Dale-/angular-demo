@@ -1,6 +1,7 @@
 
-angular.module('movieServices',[]).factory('SetItem', function(){
-    return function(data){
-        localStorage.setItem('movies', JSON.stringify(data));
-    }
+angular.module('movieServices',[]).factory('GetMovies', function(){
+    return function(movieType){
+        var movies = JSON.parse(localStorage.getItem('movies' + movieType));
+        return movies ? movies : [];
+    };
 });
