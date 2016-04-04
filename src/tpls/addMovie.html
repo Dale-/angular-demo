@@ -1,54 +1,77 @@
-<div class="panel panel-primary" ng-controller="AddMovieCtrl">
-    <div class="panel-heading">
-        <div class="panel-title">Add Movie</div>
+<div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Movies</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="movieList({movieType:1})">Home</a></li>
+                        <li class="active"><a ui-sref="addMovie">Add Movie</a></li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                                 aria-haspopup="true" aria-expanded="false">Manage <span
+                                class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">View Info</a></li>
+                                <li><a href="#">Manage Info</a></li>
+                            </ul>
+                        </li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown"
+                                                 role="button" aria-haspopup="true" aria-expanded="false">Movie Details
+                            <span class="caret"></span></a></li>
+                        <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown"
+                                             role="button" aria-haspopup="true" aria-expanded="false">About Us <span
+                                class="caret"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown"
+                                                 role="button" aria-haspopup="true" aria-expanded="false">Signed in as
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Change Password</a></li>
+                                <li><a href="#">My Profile</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="#">ME</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-md-12">
+
+
+    <div class="container addMovieInfo" ng-controller="AddMovieCtrl">
+        <div class="col-md-7">
+            <div class="form-area">
                 <form class="form-horizontal" role="form" name="form">
+                    <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Add Movie</h3>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">
-                            Movie Name：
-                        </label>
-                        <div class="col-md-10">
-                            <input class="form-control" ng-model="name">
-                        </div>
+                        <input class="form-control" placeholder="Name" ng-model="name" required>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">
-                            类型：
-                        </label>
-                        <div class="col-md-10">
-                            <select class="form-control" ng-model="type" id="movie_type">
-                                <option value="1">美剧</option>
-                                <option value="2">英剧</option>
-                                <option value="3">韩剧</option>
-                            </select>
-                        </div>
+                        <select class="form-control" ng-model="type" id="movie_type">
+                            <option value="1">美剧</option>
+                            <option value="2">英剧</option>
+                            <option value="3">韩剧</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">
-                            出版日期：
-                        </label>
-                        <div class="col-md-10">
-                            <input type="datetime" class="form-control" ng-model="pubTime">
-                        </div>
+                        <input type="datetime" class="form-control" ng-model="pubTime" placeholder="PubTime" required>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">
-                            导演：
-                        </label>
-                        <div class="col-md-10">
-                            <input class="form-control" ng-model="director">
-                        </div>
+                        <input class="form-control" ng-model="director" placeholder="Director" required>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">
-                            主演：
-                        </label>
-                        <div class="col-md-10">
-                            <input class="form-control" ng-model="star">
-                        </div>
+                        <input class="form-control" ng-model="star" placeholder="Star" required>
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
@@ -69,8 +92,14 @@
                                             Add Movie {{name}} Successful
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" ng-click="saveMovie()">Save changes</button>
+                                            <div class="addMovieButton">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                                        aria-label="Close" ng-click="saveMovie()">Save changes
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -78,18 +107,11 @@
 
                         </div>
                     </div>
+
                 </form>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 

@@ -12,7 +12,7 @@ movie.config(function($stateProvider, $urlRouterProvider) {
 
        })
        .state('movieList', {
-           url: '/{movieType:[0-9]{1,4}}',
+           url: '/{movieType:[0-9]{1}}',
            views: {
                '': { templateUrl: 'tpls/movieList.html' },
                'movieType@movieList': { templateUrl: 'tpls/movieType.html' },

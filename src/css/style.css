@@ -180,6 +180,21 @@ body {
     background: #fff;
 }
 
-.info {
+.info, .addMovieInfo {
     margin-top: 100px;
 }
+
+.addMovieInfo {
+    margin-left: 250px;
+}
+
+.addMovieButton {
+    /*margin-right: 100px;*/
+    padding-right: 200px;
+}
+
+
+
+
+
+
