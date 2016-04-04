@@ -1,12 +1,11 @@
 var movieList = angular.module('MovieListModule', []);
 
-movieList.controller('MovieListCtrl', function ($scope, $http, $state, $stateParams, GetMovies) {
-    
+movieList.controller('MovieListCtrl', function ($scope, $http, $state, $stateParams, GetMovies, DeleteMovie) {
+
     $scope.movieType = $stateParams.movieType;
     $scope.movies = GetMovies($scope.movieType);
     $scope.delete_movie = function (movie_id) {
-        $scope.movies.splice(movie_id, 1);
-        localStorage.setItem('movies' + $scope.movieType, JSON.stringify($scope.movies));
+        DeleteMovie(movie_id, $scope.movies, $scope.movieType);
     }
 });
 
