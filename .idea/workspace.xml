@@ -4,12 +4,7 @@
     <list default="true" id="f0635e59-0b10-4139-a75f-3464a73dbdbc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/style.css" afterPath="$PROJECT_DIR$/src/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tpls/addMovie.html" afterPath="$PROJECT_DIR$/src/tpls/addMovie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tpls/login.html" afterPath="$PROJECT_DIR$/src/tpls/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tpls/movieList.html" afterPath="$PROJECT_DIR$/src/tpls/movieList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tpls/movieType.html" afterPath="$PROJECT_DIR$/src/tpls/movieType.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tpls/navbar.html" afterPath="$PROJECT_DIR$/src/tpls/navbar.html" />
     </list>
     <ignored path="angular-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies1.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/movies1.json">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.63454545">
+              <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -92,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addMovie.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addMovie.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tpls/addMovie.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45454547">
-              <caret line="67" column="118" selection-start-line="67" selection-start-column="118" selection-end-line="67" selection-end-column="118" />
+            <state vertical-scroll-proportion="-8.490196">
+              <caret line="79" column="62" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#br#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -169,12 +164,12 @@
         <option value="$PROJECT_DIR$/src/tpls/home.html" />
         <option value="$PROJECT_DIR$/src/tpls/movieGrid.html" />
         <option value="$PROJECT_DIR$/src/tpls/movieType.html" />
-        <option value="$PROJECT_DIR$/src/css/style.css" />
         <option value="$PROJECT_DIR$/src/js/app.js" />
         <option value="$PROJECT_DIR$/src/tpls/movieList.html" />
         <option value="$PROJECT_DIR$/src/tpls/login.html" />
         <option value="$PROJECT_DIR$/src/tpls/navbar.html" />
         <option value="$PROJECT_DIR$/src/tpls/addMovie.html" />
+        <option value="$PROJECT_DIR$/src/css/style.css" />
       </list>
     </option>
   </component>
@@ -604,14 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.041666">
-          <caret line="192" column="24" selection-start-line="192" selection-start-column="24" selection-end-line="192" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/movies1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.125">
@@ -632,14 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tpls/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -686,14 +665,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tpls/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tpls/addMovie.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45454547">
-          <caret line="67" column="118" selection-start-line="67" selection-start-column="118" selection-end-line="67" selection-end-column="118" />
+        <state vertical-scroll-proportion="-8.490196">
+          <caret line="79" column="62" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#br#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63454545">
+          <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

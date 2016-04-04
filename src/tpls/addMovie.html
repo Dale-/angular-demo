@@ -49,7 +49,7 @@
 
 
     <div class="container addMovieInfo" ng-controller="AddMovieCtrl">
-        <div class="col-md-7">
+        <div class="col-md-8">
             <div class="form-area">
                 <form class="form-horizontal" role="form" name="form">
                     <br style="clear:both">
@@ -75,9 +75,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">保存</a>
-                            <a ui-sref="movieList({movieType:1})" class="btn btn-primary">取消</a>
-
+                            <div class="addMovieButton">
+                                <a ui-sref="movieList({movieType:1})" class="btn btn-primary">Cancel</a>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Submit</a>
+                            </div>
 
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
                                  aria-labelledby="myModalLabel" aria-hidden="true">
@@ -92,14 +94,12 @@
                                             Add Movie {{name}} Successful
                                         </div>
                                         <div class="modal-footer">
-                                            <div class="addMovieButton">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                                    Close
-                                                </button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                                        aria-label="Close" ng-click="saveMovie()">Save changes
-                                                </button>
-                                            </div>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                                    aria-label="Close" ng-click="saveMovie()">Save changes
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

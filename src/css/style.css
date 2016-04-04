@@ -189,8 +189,10 @@ body {
 }
 
 .addMovieButton {
-    /*margin-right: 100px;*/
-    padding-right: 200px;
+    text-align: right;
+    width: 300px;
+    /*margin-right: 0px;*/
+    /*padding-right: 0px;*/
 }
 
 
