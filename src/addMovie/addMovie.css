@@ -1,0 +1,14 @@
+.addMovieInfo {
+    margin: 100px auto;
+    padding: 100px auto;
+}
+
+.addMovieButton {
+    text-align: right;
+    width: 300px;
+}
+
+.navbar-toggle .icon-bar {
+    color: #fff;
+    background: #fff;
+}
