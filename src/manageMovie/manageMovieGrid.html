@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div ng-model="movies">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>MovieId</th>
+                            <th>Name</th>
+                            <th>PubTime</th>
+                            <th>Director</th>
+                            <th>Star</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+                        </tr>
+                        <tr ng-repeat="movie in manageMovie.movies">
+                            <td>{{$index+1}}</td>
+                            <td>{{movie.name}}</td>
+                            <td>{{movie.pubTime | pubDateTime}}</td>
+                            <td>{{movie.director}}</td>
+                            <td>{{movie.star}}</td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs"
+                                        data-toggle="modal" data-target="#myModal"
+                                        ng-click="manageMovie.delete_movie($index)">
+                                    Delete
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-xs">Edit
+                                </button>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
