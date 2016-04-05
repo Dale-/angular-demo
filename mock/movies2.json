@@ -1,31 +1,23 @@
 [
   {
-    "movieId": "1",
-    "index": "1",
     "name": "Pride and Prejudice 傲慢与偏见",
     "pubTime": "1995.3.4",
     "director": "Jane Austen",
     "star": "Damon Lindelof / Bryan Burk / Carlton Cuse / Jack Bender"
   },
   {
-    "movieId": "2",
-    "index": "2",
     "name": "Little Britain 小不列颠",
     "pubTime": "2007.4.3",
     "director": "David Walliams / Matt Lucas",
     "star": "David Walliams / Matt Lucas"
   },
   {
-    "movieId": "3",
-    "index": "3",
     "name": "Jane Eyre 简爱",
     "pubTime": "2009.2.3",
     "director": "Charlotte Brontë ",
     "star": "Nina Dobrev / Paul Wesley / Ian Somerhalder / Steven R. McQueen"
   },
   {
-    "movieId": "4",
-    "index": "4",
     "name": "Oliver Twist 雾都孤儿",
     "pubTime": "2008.2.2",
     "director": "Alan Ball",
