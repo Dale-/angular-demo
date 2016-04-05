@@ -20,4 +20,6 @@ angular.module('AddMovieModule', [])
         };
     });
 
+AddMovieCtrl.$inject = ["$http", "$state", "$stateParams", "GetMoviesByType", "AddMovieToMovies"];
+
 

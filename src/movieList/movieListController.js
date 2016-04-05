@@ -23,3 +23,5 @@ angular.module('MovieListModule', [])
             DeleteMovie(movie_id, this.movies, this.movieType);
         }
     });
+
+MovieListCtrl.$inject = ["$http", "$state", "$stateParams", "GetMovies", "DeleteMovie"];
