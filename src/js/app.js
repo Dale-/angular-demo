@@ -12,7 +12,11 @@ angular.module('movieApp', ['ui.router', 'ngGrid', 'MovieListModule', 'timeFilte
         .state('movieList', {
             url: '/{movieType:[0-9]{1}}',
             views: {
-                '': {templateUrl: 'tpls/movieList.html'},
+                '': {
+                    templateUrl: 'tpls/movieList.html',
+                    controller: 'MovieListCtrl',
+                    controllerAs:'movieList'
+                },
                 'movieType@movieList': {templateUrl: 'tpls/movieType.html'},
                 'movieGrid@movieList': {templateUrl: 'tpls/movieGrid.html'}
             }

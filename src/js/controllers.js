@@ -1,10 +1,10 @@
 angular.module('MovieListModule', [])
-    .controller('MovieListCtrl', function ($scope, $http, $state, $stateParams, GetMovies, DeleteMovie) {
+    .controller('MovieListCtrl', function ($http, $state, $stateParams, GetMovies, DeleteMovie) {
 
-        $scope.movieType = $stateParams.movieType;
-        $scope.movies = GetMovies($scope.movieType);
-        $scope.delete_movie = function (movie_id) {
-            DeleteMovie(movie_id, $scope.movies, $scope.movieType);
+        this.movieType = $stateParams.movieType;
+        this.movies = GetMovies(this.movieType);
+        this.delete_movie = function (movie_id) {
+            DeleteMovie(movie_id, this.movies, this.movieType);
         }
     }).controller('AddMovieCtrl', function ($http, $state, $stateParams, GetMoviesByType, AddMovieToMovies) {
 
