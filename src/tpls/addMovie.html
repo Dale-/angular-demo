@@ -48,30 +48,30 @@
     </div>
 
 
-    <div class="container addMovieInfo" ng-controller="AddMovieCtrl">
+    <div class="container addMovieInfo">
         <div class="col-md-8">
             <div class="form-area">
                 <form class="form-horizontal" role="form" name="form">
                     <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">Add Movie</h3>
                     <div class="form-group">
-                        <input class="form-control" placeholder="Name" ng-model="name" required>
+                        <input class="form-control" placeholder="Name" ng-model="addMovie.name" required>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" ng-model="type" id="movie_type">
+                        <select class="form-control" ng-model="addMovie.type" id="movie_type">
                             <option value="1">美剧</option>
                             <option value="2">英剧</option>
                             <option value="3">韩剧</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="datetime" class="form-control" ng-model="pubTime" placeholder="PubTime" required>
+                        <input type="datetime" class="form-control" ng-model="addMovie.pubTime" placeholder="PubTime" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" ng-model="director" placeholder="Director" required>
+                        <input class="form-control" ng-model="addMovie.director" placeholder="Director" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" ng-model="star" placeholder="Star" required>
+                        <input class="form-control" ng-model="addMovie.star" placeholder="Star" required>
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
@@ -91,14 +91,14 @@
                                             </h4>
                                         </div>
                                         <div class="modal-body">
-                                            Add Movie {{name}} Successful
+                                            Add Movie {{addMovie.name}} Successful
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">
                                                 Close
                                             </button>
                                             <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                                    aria-label="Close" ng-click="saveMovie()">Save changes
+                                                    aria-label="Close" ng-click="addMovie.saveMovie()">Save changes
                                             </button>
                                         </div>
                                     </div>

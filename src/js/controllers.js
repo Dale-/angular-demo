@@ -6,13 +6,13 @@ angular.module('MovieListModule', [])
         $scope.delete_movie = function (movie_id) {
             DeleteMovie(movie_id, $scope.movies, $scope.movieType);
         }
-    }).controller('AddMovieCtrl', function ($scope, $http, $state, $stateParams, GetMoviesByType, AddMovieToMovies) {
+    }).controller('AddMovieCtrl', function ($http, $state, $stateParams, GetMoviesByType, AddMovieToMovies) {
 
-    $scope.saveMovie = function () {
-        var movie_type = $('#movie_type option:selected').val();
-        var movies = GetMoviesByType(movie_type);
-        AddMovieToMovies($scope, movies, movie_type);
-        document.form.reset();
-    };
-});
+        this.saveMovie = function () {
+            var movie_type = $('#movie_type option:selected').val();
+            var movies = GetMoviesByType(movie_type);
+            AddMovieToMovies(this, movies, movie_type);
+            document.form.reset();
+        };
+    });
 

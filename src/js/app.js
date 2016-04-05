@@ -19,6 +19,9 @@ angular.module('movieApp', ['ui.router', 'ngGrid', 'MovieListModule', 'timeFilte
         })
         .state('addMovie', {
             url: '/addMovie',
-            templateUrl: 'tpls/addMovie.html'
+            templateUrl: 'tpls/addMovie.html',
+            controller: 'AddMovieCtrl',
+            controllerAs:'addMovie'
+
         })
 });
