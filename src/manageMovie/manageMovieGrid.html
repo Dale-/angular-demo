@@ -27,7 +27,7 @@
                             </td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs"
-                                        ng-click="manageMovie.showMovie(movie)">Edit
+                                        ng-click="manageMovie.showMovie(movie, $index)">Edit
                                 </button>
                                 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog"
                                      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -77,8 +77,7 @@
                                                         ng-click="manageMovie.resetMovie()">Reset
                                                 </button>
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                                        aria-label="Close" ng-click="manageMovie.updateMovie()">Save
-                                                    changes
+                                                        aria-label="Close" ng-click="manageMovie.updateMovie()">Update Movie
                                                 </button>
                                             </div>
                                         </div>

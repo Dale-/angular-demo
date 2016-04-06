@@ -24,25 +24,20 @@ angular.module('ManageMovieModule', [])
             ManageMovie.delete(movie_id, this.movies, this.movieType);
         };
 
-        this.showMovie = function (movie) {
-            this.formValue = ManageMovie.getForm(movie);
+        this.showMovie = function (movie, index) {
+            this.formValue = ManageMovie.getForm(movie, index);
             $('#updateModal').modal('show');
         };
 
         this.updateMovie = function () {
-            var movie = {
-                name: this.name,
-                pubTime: this.pubTime,
-                director: this.director,
-                star: this.star,
-                type: this.type
-            }
+            var movies = ManageMovie.get(this.formValue.type);
+            ManageMovie.update(this.formValue, movies);
+            location.reload();
         };
 
         this.resetMovie = function() {
             this.formValue = null;
         }
-
 
     });
 
