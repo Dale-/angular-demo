@@ -14,6 +14,11 @@ angular.module('AddMovieModule').controller('AddMovieCtrl',[]).$inject = ['Movie
 angular.module('AddMovieModule')
     .controller('AddMovieCtrl', function (Movie) {
 
+        $('#datePicker')
+            .datepicker({
+                format: 'yyyy/mm/dd'
+            });
+
         this.saveMovie = function () {
             var movies = Movie.get(this);
             this.newMovie = Movie.getNewMovie(this);
