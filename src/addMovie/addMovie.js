@@ -13,9 +13,8 @@ angular.module('AddMovieModule', [])
     .controller('AddMovieCtrl', function ($http, $state, $stateParams, Movie) {
 
         this.saveMovie = function () {
-            var movie_type = $('#movie_type option:selected').val();
-            var movies = Movie.get(movie_type);
-            Movie.add(this, movies, movie_type);
+            var movies = Movie.get(this);
+            Movie.add(this, movies);
             document.form.reset();
         };
     });
