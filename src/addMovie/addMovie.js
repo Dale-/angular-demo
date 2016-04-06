@@ -4,7 +4,7 @@ angular.module('AddMovieModule', [])
             url: '/addMovie',
             templateUrl: 'addMovie/addMovie.html',
             controller: 'AddMovieCtrl',
-            controllerAs: 'addMovie'
+            controllerAs: 'vm'
 
         })
     });

@@ -13,7 +13,7 @@
                             <th>Delete</th>
                             <th>Detail</th>
                         </tr>
-                        <tr ng-repeat="movie in movieList.movies">
+                        <tr ng-repeat="movie in vm.movies">
                             <td>{{$index+1}}</td>
                             <td>{{movie.name}}</td>
                             <td>{{movie.pubTime | pubDateTime}}</td>
@@ -21,7 +21,7 @@
                             <td>{{movie.star}}</td>
                             <td>
                                 <button type="button" class="btn btn-danger btn-xs"
-                                        ng-click="movieList.deleteMovie($index)">
+                                        ng-click="vm.deleteMovie($index)">
                                     Delete
                                 </button>
                             </td>

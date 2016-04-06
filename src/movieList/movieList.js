@@ -6,7 +6,7 @@ angular.module('MovieListModule', [])
                 '': {
                     templateUrl: 'movieList/movieList.html',
                     controller: 'MovieListCtrl',
-                    controllerAs: 'movieList'
+                    controllerAs: 'vm'
                 },
                 'movieType@movieList': {templateUrl: 'movieList/movieType.html'},
                 'movieGrid@movieList': {templateUrl: 'movieList/movieGrid.html'}

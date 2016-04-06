@@ -13,7 +13,7 @@
                             <th>Delete</th>
                             <th>Edit</th>
                         </tr>
-                        <tr ng-repeat="movie in manageMovie.movies">
+                        <tr ng-repeat="movie in vm.movies">
                             <td>{{$index+1}}</td>
                             <td>{{movie.name}}</td>
                             <td>{{movie.pubTime | pubDateTime}}</td>
@@ -21,13 +21,13 @@
                             <td>{{movie.star}}</td>
                             <td>
                                 <button type="button" class="btn btn-danger btn-xs"
-                                        ng-click="manageMovie.deleteMovie($index)">
+                                        ng-click="vm.deleteMovie($index)">
                                     Delete
                                 </button>
                             </td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs"
-                                        ng-click="manageMovie.showMovie(movie, $index)">Edit
+                                        ng-click="vm.showMovie(movie, $index)">Edit
                                 </button>
                                 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog"
                                      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -44,12 +44,12 @@
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <label>Name</label>
-                                                    <input class="form-control" ng-model="manageMovie.formValue.name"
+                                                    <input class="form-control" ng-model="vm.formValue.name"
                                                            required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Type</label>
-                                                    <select class="form-control" ng-model="manageMovie.formValue.type">
+                                                    <select class="form-control" ng-model="vm.formValue.type">
                                                         <option value="1">美剧</option>
                                                         <option value="2">英剧</option>
                                                         <option value="3">韩剧</option>
@@ -58,27 +58,27 @@
                                                 <div class="form-group">
                                                     <label>PubTime</label>
                                                     <div class="input-group input-append date" id="datePicker">
-                                                        <input type="text" class="form-control" ng-model="manageMovie.formValue.pubTime" required>
+                                                        <input type="text" class="form-control" ng-model="vm.formValue.pubTime" required>
                                                         <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Director</label>
                                                     <input class="form-control"
-                                                           ng-model="manageMovie.formValue.director" required>
+                                                           ng-model="vm.formValue.director" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Star</label>
-                                                    <input class="form-control" ng-model="manageMovie.formValue.star"
+                                                    <input class="form-control" ng-model="vm.formValue.star"
                                                            required>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-warning"
-                                                        ng-click="manageMovie.resetMovie()">Reset
+                                                        ng-click="vm.resetMovie()">Reset
                                                 </button>
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                                        aria-label="Close" ng-click="manageMovie.updateMovie()">Update Movie
+                                                        aria-label="Close" ng-click="vm.updateMovie()">Update Movie
                                                 </button>
                                             </div>
                                         </div>

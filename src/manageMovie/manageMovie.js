@@ -6,7 +6,7 @@ angular.module('ManageMovieModule', [])
                 '': {
                     templateUrl: 'manageMovie/manageMovieList.html',
                     controller: 'ManageMovieCtrl',
-                    controllerAs: 'manageMovie'
+                    controllerAs: 'vm'
                 },
                 'manageMovieType@manageMovie': {templateUrl: 'manageMovie/manageMovieType.html'},
                 'manageMovieGrid@manageMovie': {templateUrl: 'manageMovie/manageMovieGrid.html'}

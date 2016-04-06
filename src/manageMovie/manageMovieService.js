@@ -1,4 +1,6 @@
-angular.module('ManageMovieService', [])
+angular.module('ManageMovieService',[]).factory('ManageMovie',[]).$inject = ['Common'];
+
+angular.module('ManageMovieService')
     .factory('ManageMovie', function (Common) {
         return {
             getForm: function (scope, index) {
