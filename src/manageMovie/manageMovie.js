@@ -25,12 +25,7 @@ angular.module('ManageMovieModule', [])
         };
 
         this.showMovie = function (movie) {
-            this.name = movie.name;
-            this.type = movie.type;
-            this.pubTime = movie.pubTime;
-            this.director = movie.director;
-            this.star = movie.star;
-            this.type = movie.type;
+            this.formValue = ManageMovie.getForm(movie);
             $('#updateModal').modal('show');
         };
 
@@ -42,6 +37,12 @@ angular.module('ManageMovieModule', [])
                 star: this.star,
                 type: this.type
             }
+        };
+
+        this.resetMovie = function() {
+            this.formValue = null;
         }
+
+
     });
 
