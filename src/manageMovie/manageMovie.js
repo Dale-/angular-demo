@@ -19,8 +19,18 @@ angular.module('ManageMovieModule', [])
 
         this.movieType = $stateParams.movieType;
         this.movies = ManageMovie.get(this.movieType);
-        this.delete_movie = function (movie_id) {
-            ManageMovie.get(movie_id, this.movies, this.movieType);
-        }
+
+        this.deleteMovie = function (movie_id) {
+            ManageMovie.delete(movie_id, this.movies, this.movieType);
+        };
+
+        this.updateMovie = function (movie) {
+            this.name = movie.name;
+            this.type = movie.type;
+            this.pubTime = movie.pubTime;
+            this.director = movie.director;
+            this.star = movie.star;
+            $('#updateModal').modal('show');
+        };
     });
 
