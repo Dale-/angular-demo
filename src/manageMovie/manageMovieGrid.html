@@ -27,8 +27,32 @@
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-success btn-xs">Edit
+                                <button type="button" class="btn btn-success btn-xs"
+                                        data-toggle="modal" data-target="#myModal">Edit
                                 </button>
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                     aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    Add Movie {{movie.name}}
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                Add Movie {{movie.name}} Successful
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                                        aria-label="Close" ng-click="">Save changes
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
 
                         </tr>

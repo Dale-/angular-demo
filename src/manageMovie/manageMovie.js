@@ -15,12 +15,12 @@ angular.module('movieApp')
     });
 
 angular.module('ManageMovieModule', [])
-    .controller('ManageMovieCtrl', function ($http, $state, $stateParams, GetMovies, DeleteMovie) {
+    .controller('ManageMovieCtrl', function ($http, $state, $stateParams, ManageMovie) {
 
         this.movieType = $stateParams.movieType;
-        this.movies = GetMovies(this.movieType);
+        this.movies = ManageMovie.get(this.movieType);
         this.delete_movie = function (movie_id) {
-            DeleteMovie(movie_id, this.movies, this.movieType);
+            ManageMovie.get(movie_id, this.movies, this.movieType);
         }
     });
 

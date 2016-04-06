@@ -15,12 +15,16 @@ angular.module('movieApp')
     });
 
 angular.module('MovieListModule', [])
-    .controller('MovieListCtrl', function ($http, $state, $stateParams, GetMovies, DeleteMovie) {
+    .controller('MovieListCtrl', function ($http, $state, $stateParams, MovieList) {
 
         this.movieType = $stateParams.movieType;
-        this.movies = GetMovies(this.movieType);
+        this.movies = MovieList.get(this.movieType);
         this.delete_movie = function (movie_id) {
-            DeleteMovie(movie_id, this.movies, this.movieType);
+            MovieList.delete(movie_id, this.movies, this.movieType);
         }
     });
+
+    //.$inject(['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie']);
+
+//angular.module('MovieListModule').controller('MovieListCtrl').$inject = ['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie'];
 

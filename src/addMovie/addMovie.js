@@ -10,12 +10,12 @@ angular.module('movieApp')
     });
 
 angular.module('AddMovieModule', [])
-    .controller('AddMovieCtrl', function ($http, $state, $stateParams, GetMoviesByType, AddMovieToMovies) {
+    .controller('AddMovieCtrl', function ($http, $state, $stateParams, Movie) {
 
         this.saveMovie = function () {
             var movie_type = $('#movie_type option:selected').val();
-            var movies = GetMoviesByType(movie_type);
-            AddMovieToMovies(this, movies, movie_type);
+            var movies = Movie.get(movie_type);
+            Movie.add(this, movies, movie_type);
             document.form.reset();
         };
     });
