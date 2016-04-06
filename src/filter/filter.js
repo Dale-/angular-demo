@@ -6,8 +6,8 @@ angular.module('TimeFilter', [])
 
             if (timeArray.length > 2) {
 
-                var year = timeArray[2];
-                var month = timeArray[1];
+                var year = timeArray[1];
+                var month = timeArray[2];
                 var date = timeArray[0];
 
                 month = month[0] == '0' ? month[1] : month;

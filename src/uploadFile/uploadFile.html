@@ -1,0 +1,136 @@
+<div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Movies</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="movieList({movieType:1})">Home</a></li>
+                        <li class="active"><a ui-sref="addMovie">Add Movie</a></li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                                 aria-haspopup="true" aria-expanded="false"
+                                                 ui-sref="manageMovie({movieType:1})">Manage </a>
+                        </li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown"
+                                                 role="button" aria-haspopup="true" aria-expanded="false">Movie Details
+                            <span class="caret"></span></a></li>
+                        <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown"
+                                             role="button" aria-haspopup="true" aria-expanded="false">About Us <span
+                                class="caret"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown"
+                                                 role="button" aria-haspopup="true" aria-expanded="false">Signed in as
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Change Password</a></li>
+                                <li><a href="#">My Profile</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="#">ME</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container addMovieInfo">
+        <div class="col-md-8">
+            <div class="form-area">
+                <form class="form-horizontal" role="form" name="form">
+                    <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Add Movie</h3>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Name" ng-model="addMovie.newMovie.name" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="addMovie.newMovie.type">
+                            <option value="1">美剧</option>
+                            <option value="2">英剧</option>
+                            <option value="3">韩剧</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-append date" id="datePicker">
+                            <input type="text" class="form-control" ng-model="addMovie.newMovie.pubTime" placeholder="PubTime" required>
+                            <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" ng-model="addMovie.newMovie.director" placeholder="Director" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" ng-model="addMovie.newMovie.star" placeholder="Star" required>
+                    </div>
+                    <div class="form-group">
+                        <!--<img ngf-src="data.file || data.defaultImage" class="img-responsive" style="width:200px; height: 200px; max-width:500px;"/>-->
+                        <!--<div class="button" ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false" ng-model="data.file">选择文件</div>-->
+                        <!--<button ng-click="addMovie.upload()">upload</button>-->
+
+                        <!--<div ng-app="app">-->
+                            <!--<div ng-controller="AppController">-->
+                                <!--<input type="file" nv-file-select uploader="uploader"/><br/>-->
+                                <!--<ul>-->
+                                    <!--<li ng-repeat="item in uploader.queue">-->
+                                        <!--Name: <span ng-bind="item.file.name"></span><br/>-->
+                                        <!--<button ng-click="item.upload()">upload</button>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <input type="file" file-model="myFile" ng-model="addMovie.newMovie.pic"/>
+                        <button ng-click="addMovie.uploadFile()">upload me</button>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="addMovieButton">
+                                <a ui-sref="movieList({movieType:1})" class="btn btn-primary">Cancel</a>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Submit</a>
+                            </div>
+
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                Add Movie
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Do you want to add {{addMovie.newMovie.name}} movie ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                                    aria-label="Close" ng-click="addMovie.saveMovie()">Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

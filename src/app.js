@@ -4,3 +4,4 @@ angular.module('movieApp', ['ui.router', 'ngGrid',
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/index');
     });
+

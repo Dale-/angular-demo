@@ -22,6 +22,11 @@ angular.module('ManageMovieModule')
         this.movieType = $stateParams.movieType;
         this.movies = ManageMovie.get(this.movieType);
 
+        $('#datePicker')
+            .datepicker({
+                format: 'yyyy/mm/dd'
+            });
+
         this.deleteMovie = function (movieId) {
             ManageMovie.delete(movieId, this.movies, this.movieType);
         };

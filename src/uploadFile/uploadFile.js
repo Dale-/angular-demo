@@ -20,6 +20,7 @@ angular.module('AddMovieModule')
                 });
 
             this.saveMovie = function () {
+                console.log(this.newMovie.pic);
                 var movies = Movie.get(this);
                 this.newMovie = Movie.getNewMovie(this);
                 Movie.add(this, movies, this.newMovie);
