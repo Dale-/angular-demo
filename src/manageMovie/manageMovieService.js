@@ -1,15 +1,7 @@
-
 angular.module('ManageMovieService', [])
     .factory('ManageMovie', function (Common) {
         return {
-            get: function(movieType){
-                return JSON.parse(localStorage.getItem('movies' + movieType));
-            },
-            delete: function(id, movies, movieType){
-                movies.splice(id, 1);
-                localStorage.setItem('movies' + movieType, JSON.stringify(movies));
-            },
-            getForm: function(scope, index) {
+            getForm: function (scope, index) {
                 return {
                     name: scope.name,
                     pubTime: scope.pubTime,
@@ -20,24 +12,16 @@ angular.module('ManageMovieService', [])
                     originType: scope.type
                 }
             },
-            update: function(scope, movies){
-                var movie = {
-                    name: scope.name,
-                    pubTime: scope.pubTime,
-                    director: scope.director,
-                    star: scope.star,
-                    type: scope.type
-                };
+            update: function (scope, movies) {
+                var movie = Common.getMovie(scope);
 
-                if(scope.type == scope.originType) {
+                if (scope.type == scope.originType) {
                     movies[scope.index] = movie;
                     Common.setMoviesToLocalStorage(scope.type, movies);
                 } else {
-                    var originMovies = JSON.parse(localStorage.getItem('movies' + scope.originType)) || [];
-                    originMovies.splice(scope.index, 1);
-                    Common.setMoviesToLocalStorage(scope.originType, originMovies);
-                    movies.push(movie);
-                    Common.setMoviesToLocalStorage(scope.type, movies);
+                    var originMovies = Common.getMoviesByType(scope.originType);
+                    Common.deleteMovie(scope.index, originMovies, scope.originType);
+                    Common.addMovie(movie, movies, scope.type);
                 }
             }
         };

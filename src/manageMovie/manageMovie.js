@@ -14,13 +14,13 @@ angular.module('ManageMovieModule', [])
         })
     });
 
-angular.module('ManageMovieModule').controller('ManageMovieCtrl',[]).$inject = ['$stateParams', 'ManageMovie'];
+angular.module('ManageMovieModule').controller('ManageMovieCtrl', []).$inject = ['$stateParams', 'ManageMovie', 'Common'];
 
 angular.module('ManageMovieModule')
-    .controller('ManageMovieCtrl', function ($stateParams, ManageMovie) {
+    .controller('ManageMovieCtrl', function ($stateParams, ManageMovie, Common) {
 
         this.movieType = $stateParams.movieType;
-        this.movies = ManageMovie.get(this.movieType);
+        this.movies = Common.getMoviesByType(this.movieType);
 
         $('#datePicker')
             .datepicker({
@@ -28,7 +28,7 @@ angular.module('ManageMovieModule')
             });
 
         this.deleteMovie = function (movieId) {
-            ManageMovie.delete(movieId, this.movies, this.movieType);
+            Common.deleteMovie(movieId, this.movies, this.movieType);
         };
 
         this.showMovie = function (movie, index) {
@@ -37,12 +37,12 @@ angular.module('ManageMovieModule')
         };
 
         this.updateMovie = function () {
-            var movies = ManageMovie.get(this.formValue.type);
+            var movies = Common.getMoviesByType(this.formValue.type);
             ManageMovie.update(this.formValue, movies);
             location.reload();
         };
 
-        this.resetMovie = function() {
+        this.resetMovie = function () {
             this.formValue = null;
         }
 

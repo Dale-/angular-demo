@@ -9,10 +9,10 @@ angular.module('AddMovieModule', [])
         })
     });
 
-angular.module('AddMovieModule').controller('AddMovieCtrl', []).$inject = ['Movie'];
+angular.module('AddMovieModule').controller('AddMovieCtrl', []).$inject = ['Common'];
 
 angular.module('AddMovieModule')
-    .controller('AddMovieCtrl', function (Movie) {
+    .controller('AddMovieCtrl', function (Common) {
 
             $('#datePicker')
                 .datepicker({
@@ -20,9 +20,9 @@ angular.module('AddMovieModule')
                 });
 
             this.saveMovie = function () {
-                var movies = Movie.get(this);
-                this.newMovie = Movie.getNewMovie(this);
-                Movie.add(this, movies, this.newMovie);
+                var movies = Common.getMoviesByType(this.newMovie.type);
+                this.newMovie = Common.getMovie(this.newMovie);
+                Common.addMovie(this.newMovie, movies, this.newMovie.type);
                 this.newMovie = null;
             };
         }
