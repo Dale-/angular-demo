@@ -1,4 +1,4 @@
-angular.module('movieApp')
+angular.module('AddMovieModule', [])
     .config(function ($stateProvider) {
         $stateProvider.state('addMovie', {
             url: '/addMovie',
@@ -9,7 +9,7 @@ angular.module('movieApp')
         })
     });
 
-angular.module('AddMovieModule', [])
+angular.module('AddMovieModule')
     .controller('AddMovieCtrl', function ($http, $state, $stateParams, Movie) {
 
         this.saveMovie = function () {

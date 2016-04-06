@@ -1,4 +1,4 @@
-angular.module('movieApp')
+angular.module('MovieListModule', [])
     .config(function ($stateProvider) {
         $stateProvider.state('movieList', {
             url: '/{movieType:[0-9]{1}}',
@@ -14,7 +14,7 @@ angular.module('movieApp')
         })
     });
 
-angular.module('MovieListModule', [])
+angular.module('MovieListModule')
     .controller('MovieListCtrl', function ($http, $state, $stateParams, MovieList) {
 
         this.movieType = $stateParams.movieType;
@@ -23,6 +23,7 @@ angular.module('MovieListModule', [])
             MovieList.delete(movie_id, this.movies, this.movieType);
         }
     });
+
 
 //MovieListCtrl.$inject(['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie']);
 

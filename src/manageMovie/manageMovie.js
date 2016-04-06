@@ -1,4 +1,4 @@
-angular.module('movieApp')
+angular.module('ManageMovieModule', [])
     .config(function ($stateProvider) {
         $stateProvider.state('manageMovie', {
             url: '/manageMovie/{movieType:[0-9]{1}}',
@@ -14,7 +14,7 @@ angular.module('movieApp')
         })
     });
 
-angular.module('ManageMovieModule', [])
+angular.module('ManageMovieModule')
     .controller('ManageMovieCtrl', function ($http, $state, $stateParams, ManageMovie) {
 
         this.movieType = $stateParams.movieType;
