@@ -1,9 +1,9 @@
+
 angular.module('ManageMovieService', [])
-    .factory('ManageMovie', function () {
+    .factory('ManageMovie', function (Common) {
         return {
             get: function(movieType){
-                var movies = JSON.parse(localStorage.getItem('movies' + movieType));
-                return movies || [];
+                return JSON.parse(localStorage.getItem('movies' + movieType));
             },
             delete: function(id, movies, movieType){
                 movies.splice(id, 1);
@@ -31,13 +31,13 @@ angular.module('ManageMovieService', [])
 
                 if(scope.type == scope.originType) {
                     movies[scope.index] = movie;
-                    localStorage.setItem('movies' + scope.type, JSON.stringify(movies));
+                    Common.setMoviesToLocalStorage(scope.type, movies);
                 } else {
                     var originMovies = JSON.parse(localStorage.getItem('movies' + scope.originType)) || [];
                     originMovies.splice(scope.index, 1);
-                    localStorage.setItem('movies' + scope.originType, JSON.stringify(originMovies));
+                    Common.setMoviesToLocalStorage(scope.originType, originMovies);
                     movies.push(movie);
-                    localStorage.setItem('movies' + scope.type, JSON.stringify(movies));
+                    Common.setMoviesToLocalStorage(scope.type, movies);
                 }
             }
         };

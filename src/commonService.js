@@ -11,6 +11,9 @@ angular.module('CommonService', [])
             deleteMovie: function(index, movies, type) {
                 movies.splice(index, 1);
                 this.setMoviesToLocalStorage(type, movies);
+            },
+            getMoviesOfString: function(type) {
+                return JSON.parse(this.getMoviesByType(type));
             }
         };
     });
