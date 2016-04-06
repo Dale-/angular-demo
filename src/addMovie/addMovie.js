@@ -14,8 +14,9 @@ angular.module('AddMovieModule')
 
         this.saveMovie = function () {
             var movies = Movie.get(this);
-            Movie.add(this, movies);
-            document.form.reset();
+            this.newMovie = Movie.getNewMovie(this);
+            Movie.add(this, movies, this.newMovie);
+            this.newMovie = null;
         };
     });
 
