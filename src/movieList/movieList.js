@@ -14,6 +14,8 @@ angular.module('MovieListModule', [])
         })
     });
 
+angular.module('MovieListModule').controller('MovieListCtrl',[]).$inject = ['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie'];
+
 angular.module('MovieListModule')
     .controller('MovieListCtrl', function ($http, $state, $stateParams, MovieList) {
 
@@ -25,7 +27,5 @@ angular.module('MovieListModule')
     });
 
 
-//MovieListCtrl.$inject(['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie']);
 
-//angular.module('MovieListModule').controller('MovieListCtrl').$inject = ['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie'];
 

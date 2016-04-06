@@ -28,6 +28,7 @@ angular.module('ManageMovieService', [])
                     star: scope.star,
                     type: scope.type
                 };
+
                 if(scope.type == scope.originType) {
                     movies[scope.index] = movie;
                     localStorage.setItem('movies' + scope.type, JSON.stringify(movies));

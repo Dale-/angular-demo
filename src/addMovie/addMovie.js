@@ -9,6 +9,8 @@ angular.module('AddMovieModule', [])
         })
     });
 
+angular.module('AddMovieModule').controller('AddMovieCtrl',[]).$inject = ['$http', '$state', '$stateParams', 'Movie'];
+
 angular.module('AddMovieModule')
     .controller('AddMovieCtrl', function ($http, $state, $stateParams, Movie) {
 
@@ -19,6 +21,5 @@ angular.module('AddMovieModule')
             this.newMovie = null;
         };
     });
-
 
 

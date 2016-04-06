@@ -14,6 +14,8 @@ angular.module('ManageMovieModule', [])
         })
     });
 
+angular.module('ManageMovieModule').controller('ManageMovieCtrl',[]).$inject = ['$http', '$state', '$stateParams', 'ManageMovie'];
+
 angular.module('ManageMovieModule')
     .controller('ManageMovieCtrl', function ($http, $state, $stateParams, ManageMovie) {
 
@@ -40,4 +42,6 @@ angular.module('ManageMovieModule')
         }
 
     });
+
+
 
