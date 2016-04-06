@@ -20,8 +20,8 @@ angular.module('ManageMovieModule')
         this.movieType = $stateParams.movieType;
         this.movies = ManageMovie.get(this.movieType);
 
-        this.deleteMovie = function (movie_id) {
-            ManageMovie.delete(movie_id, this.movies, this.movieType);
+        this.deleteMovie = function (movieId) {
+            ManageMovie.delete(movieId, this.movies, this.movieType);
         };
 
         this.showMovie = function (movie, index) {

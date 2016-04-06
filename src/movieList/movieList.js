@@ -19,8 +19,8 @@ angular.module('MovieListModule')
 
         this.movieType = $stateParams.movieType;
         this.movies = MovieList.get(this.movieType);
-        this.delete_movie = function (movie_id) {
-            MovieList.delete(movie_id, this.movies, this.movieType);
+        this.deleteMovie = function (movieId) {
+            MovieList.delete(movieId, this.movies, this.movieType);
         }
     });
 
