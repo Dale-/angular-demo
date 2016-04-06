@@ -14,13 +14,14 @@ angular.module('MovieListModule', [])
         })
     });
 
-angular.module('MovieListModule').controller('MovieListCtrl',[]).$inject = ['$stateParams', 'GetMovies', 'DeleteMovie'];
+angular.module('MovieListModule').controller('MovieListCtrl',[])
+    .$inject = ['$stateParams', 'GetMovies', 'DeleteMovie', 'Common'];
 
 angular.module('MovieListModule')
-    .controller('MovieListCtrl', function ($stateParams, MovieList) {
+    .controller('MovieListCtrl', function ($stateParams, MovieList, Common) {
 
         this.movieType = $stateParams.movieType;
-        this.movies = MovieList.get(this.movieType);
+        this.movies = Common.getMoviesByType(this.movieType);
         this.deleteMovie = function (movieId) {
             MovieList.delete(movieId, this.movies, this.movieType);
         }
