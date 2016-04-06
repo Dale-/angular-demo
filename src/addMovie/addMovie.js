@@ -9,10 +9,10 @@ angular.module('AddMovieModule', [])
         })
     });
 
-angular.module('AddMovieModule').controller('AddMovieCtrl',[]).$inject = ['$http', '$state', '$stateParams', 'Movie'];
+angular.module('AddMovieModule').controller('AddMovieCtrl',[]).$inject = ['Movie'];
 
 angular.module('AddMovieModule')
-    .controller('AddMovieCtrl', function ($http, $state, $stateParams, Movie) {
+    .controller('AddMovieCtrl', function (Movie) {
 
         this.saveMovie = function () {
             var movies = Movie.get(this);

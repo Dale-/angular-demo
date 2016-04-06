@@ -14,10 +14,10 @@ angular.module('MovieListModule', [])
         })
     });
 
-angular.module('MovieListModule').controller('MovieListCtrl',[]).$inject = ['$http', '$state', '$stateParams', 'GetMovies', 'DeleteMovie'];
+angular.module('MovieListModule').controller('MovieListCtrl',[]).$inject = ['$stateParams', 'GetMovies', 'DeleteMovie'];
 
 angular.module('MovieListModule')
-    .controller('MovieListCtrl', function ($http, $state, $stateParams, MovieList) {
+    .controller('MovieListCtrl', function ($stateParams, MovieList) {
 
         this.movieType = $stateParams.movieType;
         this.movies = MovieList.get(this.movieType);

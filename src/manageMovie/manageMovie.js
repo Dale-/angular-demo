@@ -14,10 +14,10 @@ angular.module('ManageMovieModule', [])
         })
     });
 
-angular.module('ManageMovieModule').controller('ManageMovieCtrl',[]).$inject = ['$http', '$state', '$stateParams', 'ManageMovie'];
+angular.module('ManageMovieModule').controller('ManageMovieCtrl',[]).$inject = ['$stateParams', 'ManageMovie'];
 
 angular.module('ManageMovieModule')
-    .controller('ManageMovieCtrl', function ($http, $state, $stateParams, ManageMovie) {
+    .controller('ManageMovieCtrl', function ($stateParams, ManageMovie) {
 
         this.movieType = $stateParams.movieType;
         this.movies = ManageMovie.get(this.movieType);
